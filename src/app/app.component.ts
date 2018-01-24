@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommentService } from './comment/comment.service'
 
 @Component({
   selector: 'app-root',
@@ -15,21 +16,17 @@ export class AppComponent {
   author :string;
   comment :string;
 
+  constructor( private commentService :CommentService) { }
+
   submitComment(thisAuthor, thisComment) {
-  	this.comments.push({author: thisAuthor, comment: thisComment});
-  	console.log(this.comments);
+  	this.commentService.submitComment(thisAuthor, thisComment, this.comments);
   }
 
   deleteComment(id) {
-  	console.log(id);
-  	this.comments.splice(id,1);
-  	console.log(this.comments);
+  	this.commentService.deleteComment(id, this.comments);
   }
 
   editComment(id) {
-  	this.author = this.comments[id].author;
-  	this.comment = this.comments[id].comment;
-  	this.deleteComment(id);
-  	console.log(id);
+  	this.commentService.editComment(id, this.comments)
   }
 }
