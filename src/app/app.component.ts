@@ -19,5 +19,7 @@ export class AppComponent {
 
   deleteComment(id) {
   	console.log(id);
+  	this.comments.splice(id,1);
+  	console.log(this.comments);
   }
 }
