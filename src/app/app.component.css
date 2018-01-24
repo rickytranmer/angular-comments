@@ -5,14 +5,25 @@ ul {
 ul li ul li {
 	font-style: italic;
 }
+button.delete-button {
+	color: red;
+	background-color: lightgray;
+}
+button.delete-button:hover {
+	background-color: gray;
+}
+button.edit-button {
+	color: red;
+	background-color: yellow;
+}
+button.edit-button:hover {
+	background-color: lightyellow;
+}
+
 .submit-button {
 	color: white;
 	background-color: black;
 }
-button {
-	color: red;
-	background-color: lightgray;
-}
-button:hover {
-	background-color: gray;
+.container {
+	font-size: 1.5rem;
 }
