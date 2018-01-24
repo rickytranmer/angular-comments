@@ -1,0 +1,18 @@
+ul {
+	list-style: none;
+	padding-left: 2vw;
+}
+ul li ul li {
+	font-style: italic;
+}
+.submit-button {
+	color: white;
+	background-color: black;
+}
+button {
+	color: red;
+	background-color: lightgray;
+}
+button:hover {
+	background-color: gray;
+}

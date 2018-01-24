@@ -7,8 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   comments = [
-      'first comment!',
-      'nice work!',
-      'I would also like to congratulate you!'
+      {author: 'Bob', comment: 'first comment!'},
+      {author: 'Tim', comment: 'nice work!'},
+      {author: 'Sue', comment: 'I would also like to congratulate you!'}
   ];
+
+  submitComment(thisAuthor, thisComment) {
+  	this.comments.push({author: thisAuthor, comment: thisComment});
+  	console.log(this.comments);
+  }
+
+  deleteComment(id) {
+  	console.log(id);
+  }
 }
